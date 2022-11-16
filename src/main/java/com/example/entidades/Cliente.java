@@ -19,3 +19,34 @@ import lombok.NoArgsConstructor;
 @Entity(name = "ClienteEntity")
 @Table(name = "cliente")
 
+public class Cliente implements Serializable{
+
+    private static final long serialVersionUID = 1L;
+    
+    @Id
+    @Column(name = "codigo_cliente")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long codigo;
+    
+    @Column(name = "nombres_cliente")
+    private String nombres;
+    
+    @Column(name = "apellidopaterno_cliente")
+    private String apellido_paterno;    
+    
+    @Column(name = "apellidomaterno_cliente")
+    private String apellido_materno;    
+    
+    @Column(name = "genero_cliente")
+    private String genero;   
+    
+    @Column(name = "correo_cliente")
+    private String correo;   
+    
+    @Column(name = "fechanacimiento_cliente")
+    private String fecha_nacimiento;  
+    
+    @Column(name = "estado_cliente")
+    private boolean estado; 
+}
+
